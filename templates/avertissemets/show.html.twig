@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avertissemets{% endblock %}
+
+{% block body %}
+    <h1>Avertissemets</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ avertissemet.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ avertissemet.date ? avertissemet.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ avertissemet.contenu }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('avertissemets_index') }}">back to list</a>
+
+    <a href="{{ path('avertissemets_edit', {'id': avertissemet.id}) }}">edit</a>
+
+    {{ include('avertissemets/_delete_form.html.twig') }}
+{% endblock %}

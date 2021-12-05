@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Avertissemets{% endblock %}
+
+{% block body %}
+    <h1>Edit Avertissemets</h1>
+
+    {{ include('avertissemets/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('avertissemets_index') }}">back to list</a>
+
+    {{ include('avertissemets/_delete_form.html.twig') }}
+{% endblock %}

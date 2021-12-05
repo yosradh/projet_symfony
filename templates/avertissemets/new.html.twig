@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Avertissemets{% endblock %}
+
+{% block body %}
+    <h1>Create new Avertissemets</h1>
+
+    {{ include('avertissemets/_form.html.twig') }}
+
+    <a href="{{ path('avertissemets_index') }}">back to list</a>
+{% endblock %}
